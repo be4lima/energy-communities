@@ -1,0 +1,6 @@
+Energy's consumption by municipality/district and sector of activity (since 1994): https://www.dgeg.gov.pt/pt/estatistica/energia/eletricidade/consumo-por-municipio-e-setor-de-atividade/
+Energy's consumption by municipality and type of consumer (since 1994): https://www.dgeg.gov.pt/pt/estatistica/energia/eletricidade/consumo-por-municipio-e-tipo-de-consumidor/
+Energy Compsumption by sector and per capita (there is a lot of other categories): https://www.iea.org/countries/portugal#data-browser
+Districts of Portugal shapefile (everything is in english): https://data.metabolismofcities.org/library/35879/
+Geographic delimitation of Portugal (divided by Counties): https://dados.gov.pt/pt/datasets/concelhos-de-portugal/
+Another datasets that can be useful for everybody: https://www.iea.org/data-and-statistics/data-sets

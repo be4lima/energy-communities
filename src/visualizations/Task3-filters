@@ -1,0 +1,43 @@
+import streamlit as st
+import numpy as np
+import pandas as pd
+import matplotlib
+import matplotlib.pyplot as plt
+
+# Task 3: Creating a Sidebar for Filters and User Inputs:
+# Design and implement a sidebar with filters and user inputs using Streamlit's sidebar functions.
+# Users should be able to filter data based on parameters like region, type of energy, time period, etc.
+
+st.title("Energy Communities in Portugal")
+st.subheader("A tool for visualizing energy demand, energy supply and solar potencial")
+
+# Loading data from task 2 (Energy Demand)
+df = pd.read_excel(r"/Users/beatr/OneDrive/Documentos/Projetos/Lisboa Project/energy_demand_alternative_approach.xlsx")
+
+# Sidebar
+st.sidebar.title("Filters and User Inputs")
+
+# Filter by district
+district_choice = st.sidebar.multiselect("Select district", df['District_name'].unique())
+if district_choice:
+    df = df[df['District_name'].isin(district_choice)]
+
+# Filter by Energy Demand
+energy_demand_choice = st.sidebar.multiselect("Select Energy Demand", df['energy_demand'].unique())
+if energy_demand_choice:
+    df = df[df['energy_demand'].isin(energy_demand_choice)]
+
+# Dataframe
+st.text('Dataframe')
+st.dataframe(df)
+
+# Histogram of Consumption
+st.text('Histogram of Consumption')
+st.bar_chart(df['Consumo'])
+
+# Boxplot of Consumption
+st.text('Boxplot of Consumption')
+
+fig1, ax1 = plt.subplots()
+plt.boxplot(df['Consumo'])
+st.pyplot(fig=fig1)
